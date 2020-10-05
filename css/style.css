@@ -350,6 +350,15 @@ a {
 .logo_footer svg {
   width: 72px;
   height: 72px;
+  margin-right: 20px !important;
+}
+
+.logo_footer .logo__upper {
+  font-size: 31px;
+}
+
+.logo_footer .logo__name {
+  font-size: 22px;
 }
 
 .logo__name {
@@ -520,15 +529,23 @@ a {
 }
 
 .header {
-  background-color: rgba(240, 240, 240, 0.9);
+  background-color: #F0F0F0;
   border-bottom: 10px solid #3ea3f2;
-  height: 80px;
+  height: 118px;
   position: relative;
   z-index: 5;
 }
 
-.header .wrapper {
-  height: 100%;
+.header__outer {
+  background-color: white;
+}
+
+.header .wrapper:first-child {
+  height: 38px;
+}
+
+.header .wrapper:nth-child(2) {
+  height: calc(100% - 38px);
 }
 
 .header__inner {
@@ -552,17 +569,13 @@ a {
 
 .header__nav {
   height: 100%;
-  width: 420px;
-  margin-right: 50px;
+  margin-right: 35px;
 }
 
 .header__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .header__nav ul,
@@ -581,10 +594,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0px 15px;
 }
 
 .header__langcontainer {
-  font-family: Raleway;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -592,6 +605,10 @@ a {
   -webkit-transition: .15s ease;
   -o-transition: .15s ease;
   transition: .15s ease;
+}
+
+.header__langcontainer * {
+  font-family: Raleway;
 }
 
 .header__langcontainer:hover {
@@ -645,11 +662,12 @@ a {
 .header__langselect {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 90px;
+  width: 97px;
   border-radius: 5px;
   position: relative;
   display: inline-block;
-  padding: 12px;
+  padding: 15px;
+  padding-bottom: 10px;
   -webkit-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -664,14 +682,16 @@ a {
   max-height: 0;
   position: absolute;
   top: 100%;
+  padding-bottom: 6px;
   left: 0;
 }
 
 .header__langlist li {
-  padding: 12px;
+  padding: 6px 15px;
 }
 
 .header__langlist li a {
+  font-weight: 400;
   -webkit-transition: 0.15s ease;
   -o-transition: 0.15s ease;
   transition: 0.15s ease;
@@ -685,6 +705,7 @@ a {
 
 .header__langlist li a:hover {
   color: #3ea3f2;
+  font-weight: 700;
 }
 
 .header__langlist li a:hover svg {
@@ -792,48 +813,6 @@ a {
 
 .logo__upper {
   font-size: 18px;
-}
-
-.breadcrumbs {
-  padding-top: 10px;
-}
-
-.breadcrumbs ul {
-  margin: 0 auto;
-  width: 97%;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid rgba(196, 196, 196, 0.5);
-}
-
-.breadcrumbs ul li:first-child {
-  margin-left: 1vw;
-}
-
-.breadcrumbs ul li:not(:last-child) {
-  padding-right: 7px;
-}
-
-.breadcrumbs ul li:not(:last-child) a {
-  opacity: 0.4;
-}
-
-.breadcrumbs ul li svg {
-  max-width: 9px;
-  max-height: 9px;
-  padding-right: 7px;
-}
-
-.breadcrumbs ul li a {
-  font-size: 14px;
-  color: #3e3f43;
 }
 
 /* here described the first tagline */
@@ -1326,10 +1305,6 @@ a {
   max-width: 1420px;
   margin: 0 auto;
   min-width: 1050px;
-}
-
-.breadcrumbs {
-  background-color: #f8f8f8;
 }
 
 main {
@@ -1963,6 +1938,16 @@ section {
     margin-left: auto;
   }
 
+  .header__nav a {
+    -webkit-transition: .3s ease-out;
+    -o-transition: .3s ease-out;
+    transition: .3s ease-out;
+  }
+
+  .header__nav a:hover {
+    background-color: white;
+  }
+
   .burger {
     display: none;
   }
@@ -2032,9 +2017,9 @@ section {
   }
 }
 
-@media screen and (max-width: 1600px) {
-  .breadcrumbs ul {
-    width: 98.5%;
+@media screen and (max-width: 1440px) {
+  .header .wrapper:nth-child(2) {
+    height: calc(100% - 28.5px);
   }
 }
 
@@ -2230,6 +2215,10 @@ section {
     -webkit-transition-delay: 0.3s;
          -o-transition-delay: 0.3s;
             transition-delay: 0.3s;
+  }
+
+  .header__nav a {
+    font-size: 18px;
   }
 
   .header__nav {
@@ -2682,6 +2671,14 @@ section {
     width: calc(54px + (100vw - 1440px) * (0.0375));
   }
 
+  .logo_footer .logo__upper {
+    font-size: calc(23.25px + (100vw - 1440px) * (0.01615));
+  }
+
+  .logo_footer .logo__name {
+    font-size: calc(16.5px + (100vw - 1440px) * (0.01146));
+  }
+
   .logo__name {
     font-size: calc(10.5px + (100vw - 1440px) * (0.00729));
   }
@@ -2723,27 +2720,11 @@ section {
   }
 
   .header {
-    height: calc(60px + (100vw - 1440px) * (0.04167));
+    height: calc(88.5px + (100vw - 1440px) * (0.06146));
   }
 
-  .breadcrumbs ul {
-    height: calc(45px + (100vw - 1440px) * (0.03125));
-  }
-
-  .breadcrumbs ul li svg {
-    max-width: calc(6.75px + (100vw - 1440px) * (0.00469));
-  }
-
-  .breadcrumbs ul li svg {
-    max-height: calc(6.75px + (100vw - 1440px) * (0.00469));
-  }
-
-  .breadcrumbs ul li svg {
-    padding-right: calc(5.25px + (100vw - 1440px) * (0.00365));
-  }
-
-  .breadcrumbs ul li a {
-    font-size: calc(10.5px + (100vw - 1440px) * (0.00729));
+  .header .wrapper:first-child {
+    height: calc(28.5px + (100vw - 1440px) * (0.01979));
   }
 
   .tags {
@@ -3038,6 +3019,14 @@ section {
     width: 54px;
   }
 
+  .logo_footer .logo__upper {
+    font-size: 23.25px;
+  }
+
+  .logo_footer .logo__name {
+    font-size: 16.5px;
+  }
+
   .logo__name {
     font-size: 10.5px;
   }
@@ -3075,27 +3064,11 @@ section {
   }
 
   .header {
-    height: 60px;
+    height: 88.5px;
   }
 
-  .breadcrumbs ul {
-    height: 45px;
-  }
-
-  .breadcrumbs ul li svg {
-    max-width: 6.75px;
-  }
-
-  .breadcrumbs ul li svg {
-    max-height: 6.75px;
-  }
-
-  .breadcrumbs ul li svg {
-    padding-right: 5.25px;
-  }
-
-  .breadcrumbs ul li a {
-    font-size: 10.5px;
+  .header .wrapper:first-child {
+    height: 28.5px;
   }
 
   .tags {
@@ -3170,6 +3143,22 @@ section {
 @media screen and (min-width: 0px) and (max-width: 999px) {
   .headline__recall {
     margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1920px) {
+  .header .wrapper:nth-child(2) {
+    height: calc(100% - (28.5px + (100vw - 1440px) * (0.01979)));
+  }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 769px) {
+  .header__nav {
+    margin-right: calc(10px + (100vw - 769px) * (0.10823));
+  }
+
+  .header__nav a {
+    font-size: calc(18px + (100vw - 769px) * (0.00866));
   }
 }
 
