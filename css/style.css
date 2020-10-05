@@ -1327,6 +1327,7 @@ section {
 .case {
   overflow: visible;
   position: relative;
+  padding-top: 110px;
 }
 
 .case__content {
@@ -2597,6 +2598,10 @@ section {
     font-size: calc(14px + (100vw - 320px) * (0.00446));
   }
 
+  .case {
+    padding-top: calc(30px + (100vw - 320px) * (0.04464));
+  }
+
   .case__title {
     font-size: calc(24px + (100vw - 320px) * (0.02679));
   }
@@ -2793,6 +2798,10 @@ section {
 
   .case__text {
     font-size: calc(16px + (100vw - 1440px) * (0.00417));
+  }
+
+  .case {
+    padding-top: calc(90px + (100vw - 1440px) * (0.04167));
   }
 
   .case__title {
@@ -3181,6 +3190,10 @@ section {
 @media screen and (min-width: 768px) and (max-width: 1440px) {
   .case__text {
     font-size: 16px;
+  }
+
+  .case {
+    padding-top: 90px;
   }
 
   .about__text {
